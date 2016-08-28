@@ -1,0 +1,680 @@
+@font-face {
+    font-family: "avenir";
+    src: url("../fonts/avenir-light-webfont.eot");
+    src: url("../fonts/avenir-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir-light-webfont.woff2") format("woff2"), url("../fonts/avenir-light-webfont.woff") format("woff"), url("../fonts/avenir-light-webfont.ttf") format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "avenir";
+    src: url("../fonts/avenir-roman-webfont.eot");
+    src: url("../fonts/avenir-roman-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir-roman-webfont.woff2") format("woff2"), url("../fonts/avenir-roman-webfont.woff") format("woff"), url("../fonts/avenir-roman-webfont.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "avenir";
+    src: url("../fonts/avenir-medium-webfont.eot");
+    src: url("../fonts/avenir-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir-medium-webfont.woff2") format("woff2"), url("../fonts/avenir-medium-webfont.woff") format("woff"), url("../fonts/avenir-medium-webfont.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "avenir";
+    src: url("../fonts/avenir-heavy-webfont.eot");
+    src: url("../fonts/avenir-heavy-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir-heavy-webfont.woff2") format("woff2"), url("../fonts/avenir-heavy-webfont.woff") format("woff"), url("../fonts/avenir-heavy-webfont.ttf") format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "avenir";
+    src: url("../fonts/avenir-black-webfont.eot");
+    src: url("../fonts/avenir-black-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir-black-webfont.woff2") format("woff2"), url("../fonts/avenir-black-webfont.woff") format("woff"), url("../fonts/avenir-black-webfont.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gotham";
+    src: url("../fonts/gotham-bold-webfont.eot");
+    src: url("../fonts/gotham-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham-bold-webfont.woff2") format("woff2"), url("../fonts/gotham-bold-webfont.woff") format("woff"), url("../fonts/gotham-bold-webfont.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "avenir", sans-serif;
+    font-weight: 400;
+    color: #2E3030;
+    font-size: 14px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+
+/*Just for this document*/
+
+.wrapper {
+    width: 95%;
+    max-width: 1600px;
+    margin: 0 auto;
+    clear: both;
+}
+
+section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E9ECF2;
+}
+
+.sectionheader {
+    padding-bottom: 20px;
+    font-size: 10px;
+    color: #9B9B9B;
+}
+
+.column15 {
+    width: 15%;
+    /*box-sizing: border-box;*/
+    float: left;
+    margin: 20px 0;
+    margin-right: 20px;
+}
+
+.column40 {
+    width: 45%;
+    box-sizing: border-box;
+    float: left;
+    margin: 20px 0;
+}
+
+.column80 {
+    width: 80%;
+    box-sizing: border-box;
+    /*padding: 10px 20px 10px 0;*/
+    float: left;
+    margin: 20px 0;
+}
+
+/*Typography section*/
+
+.specimen {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 7px 0px rgba(155,155,155,0.20);
+    border-radius: 2px;
+    box-sizing: content-box;
+    padding: 20px 20px 0 20px;
+    float: left;
+    margin-right: 3%;
+    height: 120px;
+}
+
+.specimen:last-child {
+    margin-right: 0;
+}
+
+.typographyrow {
+    padding-top: 3%;
+}
+
+.gothamspecimen {
+    font-family: "gotham", sans-serif;
+    font-weight: 600;
+}
+
+/*Color Section*/
+
+.colorcontainer {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px 0px rgba(65, 65, 63, 0.10);
+    border-radius: 2px;
+    box-sizing: border-box;
+    padding: 20px 0;
+    width: 20%;
+    margin-right: 20px;
+    float: left;
+}
+
+.colorcontainer h4, .colorcontainer h5 {
+    padding: 10px 25px;
+}
+
+.colorcontainerbg {
+    width: 100%;
+    height: 150px;
+    content: '';
+    margin-bottom: 10px;
+}
+
+
+/*Position stuff*/
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix:after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+
+/*End just for this document*/
+
+
+/*Navigation stuff*/
+
+nav {
+    height: 72px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.10);
+    box-sizing: border-box;
+    padding-top: 30px;
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+}
+
+.spacer {
+    height: 72px;
+    margin: 0;
+    background: transparent;
+    clear: both;
+}
+
+nav a {
+    font-family: "gotham", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #07356A;
+    text-transform: uppercase;
+    float: left;
+    margin-right: 20px;
+}
+
+nav a.navlink:after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px #0196E6;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    padding-bottom: 26px;
+}
+
+nav a.navlink:hover:after {
+    transform: scaleX(1);
+    padding-bottom: 26px;
+}
+
+nav a.utilitylink,
+nav a.utilitylink:hover {
+    color: #9B9B9B;
+    float: right;
+    border-bottom: none;
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.logo {
+    height: 34px;
+    width: 112px;
+    margin-top: -12px;
+    padding-right: 30px;
+}
+
+#mobilenav {
+    display: none;
+}
+
+
+/*Hero space*/
+
+.hero {
+    /*background-image: url("../images/bg@2x.png");*/
+    background-size: cover;
+    max-height: 800px;
+    clear: both;
+    padding: 20% 0;
+    max-width: 4000px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    max-width: 80%;
+    margin: 0 auto;
+    /*font-weight: 400;*/
+}
+
+.hero h5.smalltext {
+    position: absolute;
+    top: 100px;
+}
+
+.hero button {
+    padding: 30px 40px;
+}
+
+
+/*Typography for desktop*/
+
+h1 {
+    font-size: 4.286em;
+    /*line-height: 72px;*/
+    padding-top: 5px;
+    padding-bottom: 20px;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 2.857em;
+    /*line-height: 52px;*/
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+
+h3 {
+    font-size: 2.5em;
+    /*line-height: 50px;*/
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+
+h4 {
+    font-size: 1.429em;
+    /*line-height: 26px;*/
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+
+h5 {
+    font-size: 0.857em;
+    /*line-height: 16px;*/
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+h6 {
+    font-size: 0.857em;
+    font-weight: 400;
+    /*line-height: 21px;*/
+    color: #585959;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 1.214em;
+    /*line-height: 26px;*/
+    color: #585959;
+    padding-bottom: 20px;
+    font-weight: 400;
+}
+
+
+/*The footer*/
+
+footer {
+    background: #0055B7;
+    box-sizing: border-box;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    margin-top: 20px;
+    clear: both;
+}
+
+footer h5 {
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    text-decoration: none;
+}
+
+a {
+    font-size: 0.857em;
+    /*line-height: 18px;*/
+    font-weight: 300;
+    color: #0055B7;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0196E6;
+}
+
+
+/*Buttons and such*/
+
+button {
+    background: #0055B7;
+    box-sizing: border-box;
+    border-radius: 2px;
+    border: none;
+    margin: 20px auto;
+    padding: 20px 40px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0196E6;
+}
+
+button:disabled {
+    background: #B3B6BF;
+    cursor: not-allowed;
+}
+
+.buttonsmall {
+    padding: 14px 25px;
+}
+
+.buttoniconl {
+    padding-left: 8px;
+}
+
+.buttoniconr {
+    padding-right: 8px;
+}
+
+
+/*cta text styles that also goes with non-button ctas!*/
+
+.ctatext {
+    font-family: "gotham", sans-serif;
+    font-weight: 600;
+    font-size: 0.857em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/*Disabled button styles, just to show them visually on the page without having to do any jquery*/
+
+.back {
+    background: #E9ECF2;
+    color: #B3B6BF;
+}
+
+.back:hover {
+    background: #f7f7f7;
+}
+
+
+/*Button group styles*/
+
+.buttonxlwrapper {
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px 20px;
+    display: flex;
+}
+
+.buttonxl {
+    width: 48%;
+    box-shadow: 0px 0px 10px 0px rgba(65, 65, 63, 0.33);
+    border-radius: 2px;
+    padding: 85px 60px 85px 30px;
+    box-sizing: border-box;
+}
+
+.buttonxl:nth-child(even) {
+    margin-left: 40px;
+}
+
+.buttonxl:hover {
+    box-shadow: 0px 0px 20px 0px rgba(65, 65, 63, 0.53);
+}
+
+
+/*Background Color classes*/
+
+.navybg {
+    background: #07356A;
+}
+
+.redbg {
+    background: #D6001C;
+}
+
+.mintbg {
+    background: #00A499;
+}
+
+.purplebg {
+    background: #702082;
+}
+
+.goldbg {
+    background: #F99D1C;
+}
+
+.gray5 {
+    background: #F7F7F7;
+}
+
+.gradient3psu {
+    background-image: linear-gradient(-225deg, #026A63 0%, #50165D 69%, #A1051A 100%);
+}
+
+.contactusbg {
+    background-image: url("../images/contactusbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+
+/*Basic text modification classes*/
+
+.gray1 {
+    color: #2E3030;
+}
+
+.gray4 {
+    color: #D7D7D7;
+}
+
+.white {
+    color: #fff;
+}
+
+.blue {
+    color: #0055B7;
+}
+
+.mint {
+    color: #00A499;
+}
+
+.red {
+    color: #D6001C;
+}
+
+.purple {
+    color: #702082;
+}
+
+.gold {
+    color: #F99D1C;
+}
+
+.green {
+    color: #27AE60;
+}
+
+
+/*Change the font weight or size with these*/
+
+.light {
+    font-weight: 300;
+}
+
+.book {
+    font-weight: 400;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.extrabold {
+    font-weight: 700;
+}
+
+.smalltext {
+    font-size: 10px;
+}
+
+.offers {
+    font-size: 0.857em;
+    line-height: 18px;
+}
+
+
+/*Form fields*/
+
+input[type="text"] {
+    display: block;
+    margin-bottom: 10px;
+    width: 50%;
+    height: 50px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: 1px solid #E9ECF2;
+    font-size: 1em;
+    color: #585959;
+    padding-left: 10px;
+    font-family: "avenir", sans-serif;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #0196E6;
+}
+
+input[type="text"].invalid {
+    border: 1px solid #D6001C;
+    background-image: url("../images/formerror.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+input[type="text"].invalid {
+    border: 1px solid #D6001C;
+    background-image: url("../images/formerror.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+input[type="text"].valid {
+    border: 1px solid #27AE60;
+    background-image: url("../images/formvalid.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+
+/*Mobile styles */
+
+
+/*If you need guidance on other breakpoints let me know abby@motivatedesign.com*/
+
+@media only screen and (min-width: 1400px) {
+    body {
+        font-size: 16px;
+    }
+    .hero {
+        padding: 15% 0;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .navlink,
+    .utilitylink {
+        display: none;
+    }
+    #mobilenav {
+        display: block;
+        float: left;
+        color: #0055B7;
+        font-size: 1.2em;
+    }
+    .logo {
+        padding: 0;
+        margin: -12px auto;
+        display: block;
+        position: absolute;
+        left: 40vw;
+    }
+
+    .column15 {
+        clear: both;
+        width: 100%;
+        display: block;
+        padding-left: 0;
+    }
+
+    .column55 {
+        clear: both;
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+
+    .ctatext, h5, h5, .offers {
+        font-size: 1em;
+    }
+
+    .buttonxlwrapper {
+        width: 95%;
+        margin: 0 auto;
+        padding: 20px;
+        display: block;
+        box-sizing: border-box;
+    }
+    .buttonxl {
+        display: block;
+        width: 100%;
+        padding: 50px 12% 50px 30px;
+    }
+    .buttonxl:nth-child(even) {
+        margin-left: auto;
+        margin-top: 20px;
+    }
+
+}
