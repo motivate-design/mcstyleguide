@@ -67,15 +67,20 @@ body {
 }
 
 section {
-    padding-top: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.itemheader {
     padding-bottom: 20px;
-    border-bottom: 1px solid #E9ECF2;
+    font-size: 10px;
+    color: #9B9B9B;
 }
 
 .sectionheader {
     padding-bottom: 20px;
-    font-size: 10px;
-    color: #9B9B9B;
+    border-bottom: 1px solid #f2f2f2;
+    margin-bottom: 30px;
 }
 
 .column15 {
@@ -86,11 +91,24 @@ section {
     margin-right: 20px;
 }
 
+.column30 {
+    width: 30%;
+    box-sizing: border-box;
+    float: left;
+    margin: 20px 0;
+    margin-right: 20px;
+}
+
 .column40 {
     width: 45%;
     box-sizing: border-box;
     float: left;
     margin: 20px 0;
+    margin-right: 50px;
+}
+
+.column40:last-child {
+    margin-right: 0;
 }
 
 .column80 {
@@ -101,33 +119,39 @@ section {
     margin: 20px 0;
 }
 
+.spaceplz {
+    padding: 20px 50px 20px 0;
+}
+
+
 /*Typography section*/
 
 .specimen {
     background: #FFFFFF;
-    box-shadow: 0px 0px 7px 0px rgba(155,155,155,0.20);
+    box-shadow: 0px 0px 7px 0px rgba(155, 155, 155, 0.20);
     border-radius: 2px;
     box-sizing: content-box;
     padding: 20px 20px 0 20px;
     float: left;
     margin-right: 2%;
     margin-top: 1%;
-    height: 100px;
-    width: 140px;
+    height: 120px;
+    width: 150px;
 }
 
 .specimen:last-child {
     margin-right: 0;
 }
 
-.typographyrow {
-    padding-top: 3%;
+.specimen:hover {
+    box-shadow: 0px 0px 20px 0px rgba(65, 65, 63, 0.13);
 }
 
 .gothamspecimen {
     font-family: "gotham", sans-serif;
     font-weight: 600;
 }
+
 
 /*Color Section*/
 
@@ -137,14 +161,19 @@ section {
     border-radius: 3px;
     box-sizing: border-box;
     padding: 20px 0;
-    width: 200px;
+    width: 300px;
     margin-right: 20px;
     float: left;
     margin-top: 10px;
     widows: 3;
 }
 
-.colorcontainer h4, .colorcontainer h5 {
+.colorcontainer:hover {
+    box-shadow: 0px 0px 20px 0px rgba(65, 65, 63, 0.33);
+}
+
+.colorcontainer h4,
+.colorcontainer h5, .colorcontainer p {
     padding: 10px 25px;
 }
 
@@ -236,13 +265,6 @@ nav a.utilitylink:hover {
     border-bottom: none;
     margin-right: 0;
     margin-left: 20px;
-}
-
-.logo {
-    height: 34px;
-    width: 112px;
-    margin-top: -12px;
-    padding-right: 30px;
 }
 
 #mobilenav {
@@ -371,6 +393,8 @@ a:hover {
 }
 
 
+
+
 /*Buttons and such*/
 
 button {
@@ -386,6 +410,7 @@ button {
 
 button:hover {
     background: #0196E6;
+    box-shadow: 0px 0px 20px 0px rgba(65, 65, 63, 0.23);
 }
 
 button:disabled {
@@ -515,6 +540,14 @@ button:disabled {
     color: #2E3030;
 }
 
+.gray2 {
+    color: #585959;
+}
+
+.gray3 {
+    color: #9B9B9B;
+}
+
 .gray4 {
     color: #D7D7D7;
 }
@@ -545,6 +578,19 @@ button:disabled {
 
 .green {
     color: #27AE60;
+}
+
+.bluegray {
+    color: #B3B6BF;
+}
+
+
+/*.goblue:hover {
+    color: #0055B7;
+}*/
+
+.h4color {
+    color: gray;
 }
 
 
@@ -585,7 +631,7 @@ button:disabled {
 input[type="text"] {
     display: block;
     margin-bottom: 10px;
-    width: 70%;
+    width: 80%;
     height: 50px;
     appearance: none;
     box-shadow: none;
@@ -625,9 +671,6 @@ input[type="text"].valid {
 
 /*Mobile styles */
 
-
-/*If you need guidance on other breakpoints let me know abby@motivatedesign.com*/
-
 @media only screen and (min-width: 1400px) {
     body {
         font-size: 16px;
@@ -637,7 +680,24 @@ input[type="text"].valid {
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1110px) {
+    .typographyrow.column40 {
+        clear: both;
+        display: block;
+        width: 100%;
+        padding-top: 30px;
+    }
+    .column15 {
+        clear: both;
+        width: 100%;
+        display: block;
+    }
+    .column30 {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 709px) {
     .navlink,
     .utilitylink {
         display: none;
@@ -648,21 +708,12 @@ input[type="text"].valid {
         color: #0055B7;
         font-size: 1.2em;
     }
-    .logo {
-        padding: 0;
-        margin: -12px auto;
-        display: block;
-        position: absolute;
-        left: 40vw;
+    input[type="text"] {
+        width: 90%
     }
-
-    .column15 {
-        clear: both;
-        width: 100%;
-        display: block;
-        padding-left: 0;
+    .colorcontainer {
+        width: 45%;
     }
-
     .column40 {
         clear: both;
         width: 100%;
@@ -670,22 +721,17 @@ input[type="text"].valid {
         display: block;
         padding-left: 0;
     }
-
-    .colorcontainer {
-    width: 200px;
-    }
-
 }
 
 @media only screen and (max-width: 600px) {
     body {
         font-size: 12px;
     }
-
-    .ctatext, h5, h5, .offers {
+    .ctatext,
+    h5,
+    h6, {
         font-size: 1em;
     }
-
     .buttonxlwrapper {
         width: 95%;
         margin: 0 auto;
@@ -703,8 +749,32 @@ input[type="text"].valid {
         margin-top: 20px;
     }
 
+    .column30 {
+        clear: both;
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        padding-left: 0;
+
+    }
+
+    .specimen {
+        margin-top: 3%;
+        width: 30%;
+    }
+
+    section {
+        padding-top: 30px;
+    padding-bottom: 30px;
+    }
+
+}
+
+
+@media only screen and (max-width: 450px) {
+
     .colorcontainer {
-    width: 160px;
+        width: 40%;
     }
 
 }
